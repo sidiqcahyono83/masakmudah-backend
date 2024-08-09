@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
->>>>>>> 6384b14d0220f74b334ebe8e1e3feb5618cfd21f
 generator client {
   provider = "prisma-client-js"
 }
@@ -17,7 +14,6 @@ datasource db {
 }
 
 model User {
-<<<<<<< HEAD
   id           String         @id @default(cuid())
   username     String         @unique
   fullname     String?
@@ -72,26 +68,3 @@ model Categories {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
-=======
-  id       String    @id @default(cuid())
-  username String    @unique
-  password Password?
-  email    String    @unique
-
-  fullname    String?
-  address     String?
-  phoneNumber String?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-model Password {
-  id String @id @default(cuid())
-
-  hash String
-
-  use    User   @relation(fields: [userId], references: [id])
-  userId String @unique
-}
->>>>>>> 6384b14d0220f74b334ebe8e1e3feb5618cfd21f

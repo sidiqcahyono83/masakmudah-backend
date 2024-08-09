@@ -24,7 +24,7 @@ app.get("/", (c) => {
 	return c.json({
 		message: "masakmudah.com API",
 		registerURL: "/auth/register",
-		loginURL: "/auth/logib",
+		loginURL: "/auth/login",
 		usersURL: "/user",
 	});
 });
